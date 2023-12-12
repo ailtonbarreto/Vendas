@@ -179,8 +179,6 @@ with col10:
     st.plotly_chart(grafico_semana,use_container_width=True)
 
 st.markdown("""---""")
-st.write("Ranking dos Produtos")
-st.table(vendas_produto)
 
 #--------------------------------------------------------------------------------------------------
 # Esconder menu streamlit
