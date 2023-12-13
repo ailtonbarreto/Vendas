@@ -107,7 +107,7 @@ average_sale_by_transaction = round(df_selection["Total"].mean(), 2)
 with col4:
     st.markdown("""---""")
     st.subheader("Total de Vendas:",anchor=False)
-    st.subheader(f" R${total_sales:,}",anchor=False)
+    st.subheader(f"  R${total_sales:,}",anchor=False)
     st.markdown("""---""")
 with col5:
     st.markdown("""---""")
