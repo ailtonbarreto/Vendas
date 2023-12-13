@@ -74,7 +74,7 @@ classificar_dia = {'Seg':0,'Ter':1,'Qua':2,'Qui':3,'Sex':4,'Sab':5,'Dom':6}
 classificar_meses = {'Jan':1, 'Fev': 2, 'Mar': 3, 'Abr': 4, 'Mai':5, 'Jun': 6, 'Jul': 7, 'Ago': 8, 'Set':9, 'Out': 10, 'Nov': 11, 'Dez': 12}
 
 df['Ordem_Mês'] = df['Mês'].map(classificar_meses)
-df.sort_values(by='Ordem_Mês',ascending = True).drop(columns=['Ordem_Mês'])
+df = df.sort_values(by='Ordem_Mês',ascending = True).drop(columns=['Ordem_Mês'])
 #--------------------------------------------------------------------------------------------------
 # Barra lateral
 with col3a:
