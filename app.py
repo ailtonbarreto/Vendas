@@ -142,7 +142,7 @@ fig_product_sales.update_layout(plot_bgcolor="rgba(0,0,0,0)",xaxis=(dict(showgri
 
 #--------------------------------------------------------------------------------------------------
 # Vendas por dia no mês
-vendas_diames = df_selection.groupby(by=["Dia Mês"])
+vendas_diames = df_selection.groupby(by=["Dia Mês"])['Total'].sum()
 vendasmes = px.area(df_selection,x="Dia Mês",y="Total")
 
 vendasmes.update_layout(xaxis=dict(tickmode="linear"),plot_bgcolor="rgba(0,0,0,0)",yaxis=(dict(showgrid=False)),)
