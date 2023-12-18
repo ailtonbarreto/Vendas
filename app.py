@@ -77,7 +77,7 @@ df['Ordem_Mês'] = df['Mês'].map(classificar_meses)
 df = df.sort_values(by='Ordem_Mês',ascending = True).drop(columns=['Ordem_Mês'])
 #--------------------------------------------------------------------------------------------------
 # Barra lateral
-with col3a:
+with col4:
     ano = st.selectbox("Ano",df["Ano"].unique())
 with col3:
     Mês = st.selectbox('Mês',df["Mês"].unique())
@@ -105,18 +105,18 @@ star_rating = "⭐" * int(round(average_rating, 0))
 average_sale_by_transaction = round(df_selection["Total"].mean(), 2)
 
 
-with col4:
+with colleft:
     st.subheader(f" R${qtd_sales:,}",anchor=False)
     st.markdown("""---""")
     st.subheader("Total de Vendas:",anchor=False)
     st.subheader(f"  R${total_sales:,}",anchor=False)
     st.markdown("""---""")
-with col5:
+with colmid:
     st.markdown("""---""")
     st.subheader("Ticket Médio:",anchor=False)
     st.subheader(f"R$  {average_sale_by_transaction}",anchor=False)
     st.markdown("""---""")
-with col6:
+with colright:
     st.markdown("""---""")
     st.subheader("Média de Avaliação Toten:",anchor=False)
     st.subheader(f"{average_rating} {star_rating}",anchor=False)
