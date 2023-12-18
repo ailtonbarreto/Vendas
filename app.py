@@ -99,12 +99,14 @@ with col1:
 #--------------------------------------------------------------------------------------------------
 # Indicadores
 total_sales = int(df_selection["Total"].sum())
+qtd_sales = int(df_selection["Nota Fiscal"].unique())
 average_rating = round(df_selection["Rating"].mean(), 1)
 star_rating = "⭐" * int(round(average_rating, 0))
 average_sale_by_transaction = round(df_selection["Total"].mean(), 2)
 
 
 with col4:
+    st.subheader(f" R${qtd_sales:,}",anchor=False)
     st.markdown("""---""")
     st.subheader("Total de Vendas:",anchor=False)
     st.subheader(f"  R${total_sales:,}",anchor=False)
