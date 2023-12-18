@@ -120,7 +120,7 @@ with colright:
     st.subheader("Ticket Médio:",anchor=False)
     st.subheader(f"R$  {average_sale_by_transaction}",anchor=False)
     st.markdown("""---""")
-with colright:
+with colright1:
     st.markdown("""---""")
     st.subheader("Média de Avaliação Toten:",anchor=False)
     st.subheader(f"{average_rating} {star_rating}",anchor=False)
