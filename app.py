@@ -145,8 +145,7 @@ fig_product_sales.update_layout(plot_bgcolor="rgba(0,0,0,0)",xaxis=(dict(showgri
 vendas_diames = df_selection.groupby(by=["Dia Mês"])
 vendasmes = px.area(df_selection,x="Dia Mês",y="Total")
 
-)
-fig_hourly_sales.update_layout(xaxis=dict(tickmode="linear"),plot_bgcolor="rgba(0,0,0,0)",yaxis=(dict(showgrid=False)),)
+vendasmes.update_layout(xaxis=dict(tickmode="linear"),plot_bgcolor="rgba(0,0,0,0)",yaxis=(dict(showgrid=False)),)
 
 #--------------------------------------------------------------------------------------------------
 #Gráficos
