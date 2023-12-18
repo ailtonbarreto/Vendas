@@ -99,7 +99,7 @@ with col1:
 #--------------------------------------------------------------------------------------------------
 # Indicadores
 total_sales = int(df_selection["Total"].sum())
-qtd_sales = int(df_selection["Nota Fiscal"].unique())
+qtd_sales = int(df_selection["Nota Fiscal"].count())
 average_rating = round(df_selection["Rating"].mean(), 1)
 star_rating = "⭐" * int(round(average_rating, 0))
 average_sale_by_transaction = round(df_selection["Total"].mean(), 2)
