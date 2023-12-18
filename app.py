@@ -7,7 +7,7 @@ st.set_page_config(page_title="Vendas Dashboard", page_icon=":bar_chart:", layou
 #--------------------------------------------------------------------------------------------------
 # Layout
 col1, col2, col3, col4 = st.columns([4,4,1,1])
-colleft, colmid, colright = st.columns(3)
+colleft, colleft1, colright, colright1 = st.columns(4)
 col7, col8 = st.columns(2)
 col9, col10 = st.columns([2,2])
 
@@ -106,21 +106,18 @@ average_sale_by_transaction = round(df_selection["Total"].mean(), 2)
 
 
 with colleft:
-    st.subheader(f" R${qtd_sales:,}",anchor=False)
-    st.markdown("""---""")
+    st.subheader("QTD Vendas:",anchor=False)
+    st.subheader(qtd_sales,anchor=False)
+with colleft1:
     st.subheader("Total de Vendas:",anchor=False)
     st.subheader(f"  R${total_sales:,}",anchor=False)
-    st.markdown("""---""")
-with colmid:
-    st.markdown("""---""")
+   
+with colright:
     st.subheader("Ticket Médio:",anchor=False)
     st.subheader(f"R$  {average_sale_by_transaction}",anchor=False)
-    st.markdown("""---""")
-with colright:
-    st.markdown("""---""")
+with colright1:
     st.subheader("Média de Avaliação Toten:",anchor=False)
     st.subheader(f"{average_rating} {star_rating}",anchor=False)
-    st.markdown("""---""")
 
 #--------------------------------------------------------------------------------------------------
 # Vendas por linha de produto
