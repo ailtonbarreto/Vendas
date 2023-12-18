@@ -24,7 +24,7 @@ def get_data_from_excel():
     )
 #--------------------------------------------------------------------------------------------------
 # Coluna de horas no dataframe
-    df["hour"] = pd.to_datetime(df["Time"], format="%H:%M:%S").dt.hour
+    df["Dia Mês"] = pd.to_datetime(df["Data"]).dt.daysinmonth
     return df
 
 df = get_data_from_excel()
