@@ -141,15 +141,10 @@ fig_product_sales = px.bar(
 fig_product_sales.update_layout(plot_bgcolor="rgba(0,0,0,0)",xaxis=(dict(showgrid=False)))
 
 #--------------------------------------------------------------------------------------------------
-# Vendas por hora
+# Vendas por dia no mês
 vendas_diames = df_selection.groupby(by=["Dia Mês"])
-fig_hourly_sales = px.area(
-    vendas_diames,
-    x=vendas_diames.index,
-    y="Total",
-    title="<b>Movimento da Loja</b>",
-    color_discrete_sequence=["#0083B8"] * len(vendas_diames),
-    template="plotly_white",
+vendasmes = px.area(df_selection,x="Dia Mês",y="Total")
+
 )
 fig_hourly_sales.update_layout(xaxis=dict(tickmode="linear"),plot_bgcolor="rgba(0,0,0,0)",yaxis=(dict(showgrid=False)),)
 
