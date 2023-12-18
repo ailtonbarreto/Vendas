@@ -6,8 +6,8 @@ st.set_page_config(page_title="Vendas Dashboard", page_icon=":bar_chart:", layou
 
 #--------------------------------------------------------------------------------------------------
 # Layout
-col1, col2, col3, col3a = st.columns([4,4,1,1])
-col4, col5, col6 = st.columns(3)
+col1, col2, col3, col4 = st.columns([4,4,1,1])
+colleft, colmid, colright = st.columns(3)
 col7, col8 = st.columns(2)
 col9, col10 = st.columns([2,2])
 
@@ -99,7 +99,7 @@ with col1:
 #--------------------------------------------------------------------------------------------------
 # Indicadores
 total_sales = int(df_selection["Total"].sum())
-qtd_sales = int(df_selection["Nota Fiscal"].count())
+qtd_sales = int(df_selection["Nota Fiscal"].nunique())
 average_rating = round(df_selection["Rating"].mean(), 1)
 star_rating = "⭐" * int(round(average_rating, 0))
 average_sale_by_transaction = round(df_selection["Total"].mean(), 2)
