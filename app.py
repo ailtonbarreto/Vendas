@@ -142,7 +142,7 @@ fig_product_sales.update_layout(plot_bgcolor="rgba(0,0,0,0)",xaxis=(dict(showgri
 
 #--------------------------------------------------------------------------------------------------
 # Vendas por hora
-vendas_diames = df_selection.groupby(by=["Dia Mês"])[["Total"]].count()
+vendas_diames = df_selection.groupby(by=["Dia Mês"]).count()
 fig_hourly_sales = px.area(
     vendas_diames,
     x=vendas_diames.index,
