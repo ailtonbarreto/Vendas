@@ -106,19 +106,25 @@ average_sale_by_transaction = round(df_selection["Total"].mean(), 2)
 
 
 with colleft:
-    st.divider
+    st.markdown("""---""")
     st.subheader("QTD Vendas:",anchor=False)
     st.subheader(qtd_sales,anchor=False)
+    st.markdown("""---""")
 with colleft1:
+    st.markdown("""---""")
     st.subheader("Total de Vendas:",anchor=False)
     st.subheader(f"  R${total_sales:,}",anchor=False)
-   
+    st.markdown("""---""")
 with colright:
+    st.markdown("""---""")
     st.subheader("Ticket Médio:",anchor=False)
     st.subheader(f"R$  {average_sale_by_transaction}",anchor=False)
-with colright1:
+    st.markdown("""---""")
+with colright:
+    st.markdown("""---""")
     st.subheader("Média de Avaliação Toten:",anchor=False)
     st.subheader(f"{average_rating} {star_rating}",anchor=False)
+    st.markdown("""---""")
 
 #--------------------------------------------------------------------------------------------------
 # Vendas por linha de produto
