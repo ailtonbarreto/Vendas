@@ -176,7 +176,7 @@ with col8:
     st.plotly_chart(grafico_vendedor,use_container_width=True)
 with col9:
     st.markdown("""---""")
-    st.plotly_chart(fig_hourly_sales, use_container_width=True)
+    st.plotly_chart(vendasmes, use_container_width=True)
 with col10:
     st.markdown("""---""")
     st.plotly_chart(grafico_semana,use_container_width=True)
