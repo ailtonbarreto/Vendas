@@ -106,6 +106,7 @@ average_sale_by_transaction = round(df_selection["Total"].mean(), 2)
 
 
 with colleft:
+    st.divider
     st.subheader("QTD Vendas:",anchor=False)
     st.subheader(qtd_sales,anchor=False)
 with colleft1:
