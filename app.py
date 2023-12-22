@@ -78,9 +78,11 @@ df = df.sort_values(by='Ordem_Mês',ascending = True).drop(columns=['Ordem_Mês'
 #--------------------------------------------------------------------------------------------------
 # Barra lateral
 with col4:
-    ano = st.selectbox("Ano",df["Ano"].unique())
-with col3:
     Mês = st.selectbox('Mês',df["Mês"].unique())
+    
+with col3:
+    ano = st.selectbox("Ano",df["Ano"].unique())
+    
 with col2:
     lojas = st.multiselect("Lojas",['Franca','Goioerê','Ribeirão Preto'],default=['Franca','Goioerê','Ribeirão Preto'])
 
