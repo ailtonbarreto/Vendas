@@ -115,12 +115,12 @@ with colleft:
 with colleft1:
     st.markdown("""---""")
     st.subheader("Total de Vendas:",anchor=False)
-    st.subheader(f"  R${total_sales:,}",anchor=False)
+    st.subheader(f"R$ {total_sales:,}",anchor=False)
     st.markdown("""---""")
 with colright:
     st.markdown("""---""")
     st.subheader("Ticket Médio:",anchor=False)
-    st.subheader(f"R$  {average_sale_by_transaction}",anchor=False)
+    st.subheader(f"R$ {average_sale_by_transaction}",anchor=False)
     st.markdown("""---""")
 with colright1:
     st.markdown("""---""")
