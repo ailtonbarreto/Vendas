@@ -76,9 +76,14 @@ classificar_meses = {'Jan':1, 'Fev': 2, 'Mar': 3, 'Abr': 4, 'Mai':5, 'Jun': 6, '
 df['Ordem_Mês'] = df['Mês'].map(classificar_meses)
 df = df.sort_values(by='Ordem_Mês',ascending = True).drop(columns=['Ordem_Mês'])
 #--------------------------------------------------------------------------------------------------
+#Apoio seletor
+
+meses = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez']
+df = df.sort_values(by='Ano',ascending = False)
+#--------------------------------------------------------------------------------------------------
 # Barra lateral
 with col4:
-    Mês = st.selectbox('Mês',df["Mês"].unique())
+    Mês = st.selectbox('Mês',meses)
     
 with col3:
     ano = st.selectbox("Ano",df["Ano"].unique())
