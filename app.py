@@ -96,7 +96,6 @@ df_selection = df.query("Ano == @ano == Ano & Mês ==@Mês & Cidade == @lojas")
 df_selection['Ordem_dia'] = df_selection['Dia'].map(classificar_dia)
 df_selection = df_selection.sort_values(by='Ordem_dia',ascending = True).drop(columns=['Ordem_dia'])
 
-
 #--------------------------------------------------------------------------------------------------
 #Pagina principal
 with col1:
@@ -120,16 +119,16 @@ with colleft:
 with colleft1:
     st.markdown("""---""")
     st.subheader("Total de Vendas:",anchor=False)
-    st.subheader(f"R$ {total_sales:,}",anchor=False)
+    st.subheader(f"  R${total_sales:,}",anchor=False)
     st.markdown("""---""")
 with colright:
     st.markdown("""---""")
     st.subheader("Ticket Médio:",anchor=False)
-    st.subheader(f"R$ {average_sale_by_transaction}",anchor=False)
+    st.subheader(f"R$  {average_sale_by_transaction}",anchor=False)
     st.markdown("""---""")
 with colright1:
     st.markdown("""---""")
-    st.subheader("Média Toten:",anchor=False)
+    st.subheader("Média de Avaliação Toten:",anchor=False)
     st.subheader(f"{average_rating} {star_rating}",anchor=False)
     st.markdown("""---""")
 
@@ -150,9 +149,9 @@ fig_product_sales.update_layout(plot_bgcolor="rgba(0,0,0,0)",xaxis=(dict(showgri
 #--------------------------------------------------------------------------------------------------
 # Vendas por dia no mês
 vendas_diames = df_selection.groupby(by=["Dia Mês"])['Total'].sum().reset_index()
-vendasmes = px.area(vendas_diames,x="Dia Mês",y="Total",title="Vendas No Mês",color_discrete_sequence=["#0083B8"])
-vendasmes.update_yaxes(showgrid=False)
+vendasmes = px.area(vendas_diames,x="Dia Mês",y="Total")
 
+vendasmes.update_layout(xaxis=dict(tickmode="linear"),plot_bgcolor="rgba(0,0,0,0)",yaxis=(dict(showgrid=False)),)
 
 #--------------------------------------------------------------------------------------------------
 #Gráficos
