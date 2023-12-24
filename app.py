@@ -149,6 +149,7 @@ fig_product_sales.update_layout(plot_bgcolor="rgba(0,0,0,0)",xaxis=(dict(showgri
 #--------------------------------------------------------------------------------------------------
 # Vendas por dia no mês
 vendas_diames = df_selection.groupby(by=["Dia Mês"])['Total'].sum().reset_index()
+
 vendasmes = px.area(vendas_diames,x="Dia Mês",y="Total",title="Vendas do mês")
 
 vendasmes.update_layout(xaxis=dict(tickmode="linear"),plot_bgcolor="rgba(0,0,0,0)",yaxis=(dict(showgrid=False)),)
@@ -166,9 +167,8 @@ grafico_semana.update_yaxes(showgrid=False)
 
 vendas_produto = df_selection.groupby(by=["Produto"])[["Total"]].sum().sort_values(by="Total",ascending=False)
 
-vendas_vendedor = df_selection.groupby(by=["Vendedor"])[["Total"]].sum().sort_values(by="Total")
-grafico_vendedor  = px.bar(vendas_vendedor,x="Total",y=vendas_vendedor.index,
-    orientation="h",title="<b>Ranking De Vendedores</b>",color_discrete_sequence=["#0083B8"] * len(vendas_vendedor))
+grafico_produto  = px.bar(vendas_produto,x="Total",y=vendas_produto.index,
+    orientation="h",title="<b>Ranking De Vendedores</b>",color_discrete_sequence=["#0083B8"] * len(vendas_produto))
 
 df_loja = df_selection.groupby(by='Cidade')['Total'].sum().reset_index()
 vendas_lojas = px.pie(df_loja,names="Cidade",values="Total",color_discrete_sequence=["#0083B8"],title="Lojas")
@@ -179,7 +179,7 @@ vendas_lojas.update_yaxes(showgrid=False)
 with col7:
     st.plotly_chart(vendas_lojas,use_container_width=True)
 with col8:
-    st.plotly_chart(grafico_vendedor,use_container_width=True)
+    st.plotly_chart(grafico_produto,use_container_width=True)
 with col9:
     st.markdown("""---""")
     st.plotly_chart(vendasmes, use_container_width=True)
