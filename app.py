@@ -165,7 +165,7 @@ vendas_semana = vendas_semana.sort_values(by='Ordem_dia',ascending = True).drop(
 grafico_semana = px.bar(vendas_semana,x='Dia',y='Total',title='Vendas da Semana',color_discrete_sequence=["#0083B8"])
 grafico_semana.update_yaxes(showgrid=False)
 
-vendas_produto = df_selection.groupby(by=["Produto"])[["Total"]].sum().sort_values(by="Total",ascending=False)
+vendas_produto = df_selection.groupby(by=["Produto"])[["Total"]].sum().sort_values(by="Total",ascending=True)
 
 grafico_produto  = px.bar(vendas_produto,x="Total",y=vendas_produto.index,
     orientation="h",title="<b>Ranking De Vendedores</b>",color_discrete_sequence=["#0083B8"] * len(vendas_produto))
