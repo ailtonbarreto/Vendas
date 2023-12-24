@@ -119,12 +119,12 @@ with colleft:
 with colleft1:
     st.markdown("""---""")
     st.subheader("Total de Vendas:",anchor=False)
-    st.subheader(f"  R${total_sales:,}",anchor=False)
+    st.subheader(f"R$ {total_sales:,}",anchor=False)
     st.markdown("""---""")
 with colright:
     st.markdown("""---""")
     st.subheader("Ticket Médio:",anchor=False)
-    st.subheader(f"R$  {average_sale_by_transaction}",anchor=False)
+    st.subheader(f"R$ {average_sale_by_transaction}",anchor=False)
     st.markdown("""---""")
 with colright1:
     st.markdown("""---""")
@@ -168,7 +168,7 @@ grafico_semana.update_yaxes(showgrid=False)
 
 vendas_produto = df_selection.groupby(by=["Produto"])[["Total"]].sum().sort_values(by="Total",ascending=True)
 grafico_produto  = px.bar(vendas_produto,x="Total",y=vendas_produto.index,
-    orientation="h",title="<b>Ranking De Vendedores</b>",color_discrete_sequence=["#0083B8"] * len(vendas_produto))
+    orientation="h",title="<b>Ranking De Produtos</b>",color_discrete_sequence=["#0083B8"] * len(vendas_produto))
 #--------------------------------------------------------------------------------------------------
 df_loja = df_selection.groupby(by='Cidade')['Total'].sum().reset_index()
 vendas_lojas = px.pie(df_loja,names="Cidade",values="Total",color_discrete_sequence=["#0083B8"],title="Lojas")
