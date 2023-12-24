@@ -128,7 +128,7 @@ with colright:
     st.markdown("""---""")
 with colright1:
     st.markdown("""---""")
-    st.subheader("Média de Avaliação Toten:",anchor=False)
+    st.subheader("Média Toten:",anchor=False)
     st.subheader(f"{average_rating} {star_rating}",anchor=False)
     st.markdown("""---""")
 
