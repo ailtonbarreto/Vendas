@@ -142,9 +142,6 @@ vendasmes.update_layout(xaxis=dict(tickmode="linear"),plot_bgcolor="rgba(0,0,0,0
 
 #--------------------------------------------------------------------------------------------------
 #Gráficos
-grafico_rosca = px.pie(df_selection,names="Método de Pagamento",values="Total",color_discrete_sequence=["#0083B8"],title="Métodos de Pagamentos")
-
-
 vendas_semana = df_selection.groupby(by=["Dia"])["Total"].sum().reset_index()
 vendas_semana['Ordem_dia'] = vendas_semana['Dia'].map(classificar_dia)
 vendas_semana = vendas_semana.sort_values(by='Ordem_dia',ascending = True).drop(columns=['Ordem_dia'])
@@ -154,7 +151,7 @@ grafico_semana.update_yaxes(showgrid=False)
 
 vendas_produto = df_selection.groupby(by=["Produto"])[["Total"]].sum().sort_values(by="Total",ascending=True)
 grafico_produto  = px.bar(vendas_produto,x="Total",y=vendas_produto.index,
-    orientation="h",title=f'"Ranking Produtodo de {Mês} de {ano}"',color_discrete_sequence=["#0083B8"] * len(vendas_produto))
+    orientation="h",title=f'Ranking Produtodo de {Mês} de {ano}',color_discrete_sequence=["#0083B8"] * len(vendas_produto))
 #--------------------------------------------------------------------------------------------------
 df_loja = df_selection.groupby(by='Cidade')['Total'].sum().reset_index()
 vendas_lojas = px.pie(df_loja,names="Cidade",values="Total",color_discrete_sequence=["#0083B8"],title="Lojas")
