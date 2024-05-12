@@ -7,3 +7,6 @@ section{
     visibility: hidden;
 }
 
+.stPlotlyChart.js-plotly-plot{
+    background-color: #003459;
+}
