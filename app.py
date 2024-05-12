@@ -214,7 +214,7 @@ st.markdown(hidefullscreenbutton,unsafe_allow_html=True)
 
 expander = """
     <style>
-    [class="st-emotion-cache-9aoz2h e1vs0wn30"]
+    [class="user-select-none svg-container"]
     {
     background-color: #003459;
     padding: 10px;
