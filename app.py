@@ -214,7 +214,7 @@ st.markdown(hidefullscreenbutton,unsafe_allow_html=True)
 
 expander = """
     <style>
-    [data-testid="stExpander"]
+    [data-testid="column"]
     {
     background-color: #003459;
     padding: 10px;
