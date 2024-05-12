@@ -218,7 +218,7 @@ expander = """
     <style>
     [data-testid="stExpander"]
     {
-    background-color: #003459;
+    background-color: #000000;
     padding: 10px;
     border-radius: 12px;
     }
