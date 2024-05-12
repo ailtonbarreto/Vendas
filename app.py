@@ -214,7 +214,7 @@ st.markdown(hidefullscreenbutton,unsafe_allow_html=True)
 
 backgroundchatters = """
     <style>
-    [class="main-svg"]
+    [data-testid="element-container"]
     {
     background-color: white;
     }
