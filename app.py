@@ -173,34 +173,34 @@ with col10:
 #--------------------------------------------------------------------------------------------------
 # Esconder menu streamlit
 
-hide_st_style = """
-            <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            header {visibility: hidden;}
-            </style>
-            """
-st.markdown(hide_st_style, unsafe_allow_html=True)
-
-
-framegraficos = """
+borderselect = """
     <style>
     [data-testid="column"]
     {
-    border-radius: 15px;
-    background-color: #2F3035;
-    padding: 10px;
-    opacity: 80%;
-    color: white;
+    padding: 15px;
+    background-color: #003459;
+    border-radius: 12px;
+    opacity: 97%;
+    text-align: center;
     }
     </style>
 """
-st.markdown(framegraficos,unsafe_allow_html=True)
+st.markdown(borderselect,unsafe_allow_html=True)
 
 
+detalhes = """
+    <style>
+    [class="modebar-container"]
+    {
+    visibility: hidden;
+    }
+    </style>
+"""
 
 
-hidefullscreenbutton = """
+st.markdown(detalhes,unsafe_allow_html=True)
+
+desativartelacheia = """
     <style>
     [data-testid="StyledFullScreenButton"]
     {
@@ -208,17 +208,20 @@ hidefullscreenbutton = """
     }
     </style>
 """
-st.markdown(hidefullscreenbutton,unsafe_allow_html=True)
+st.markdown(desativartelacheia,unsafe_allow_html=True)
 
 
 
-# expander = """
-#     <style>
-#     [class="user-select-none svg-container"]
-#     {
-#     visibility: hidden
-#     }
-#     </style>
-# """
-# st.markdown(expander,unsafe_allow_html=True)
-#--------------------------------------------------------------------------------------------------
+
+
+expander = """
+    <style>
+    [data-testid="stExpander"]
+    {
+    background-color: #003459;
+    padding: 10px;
+    border-radius: 12px;
+    }
+    </style>
+"""
+st.markdown(expander,unsafe_allow_html=True)
