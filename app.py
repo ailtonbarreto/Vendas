@@ -212,14 +212,15 @@ st.markdown(hidefullscreenbutton,unsafe_allow_html=True)
 
 
 
-backgroundchatters = """
+expander = """
     <style>
-    [data-testid="element-container"]
+    [data-testid="stExpander"]
     {
-    background-color: white;
+    background-color: #003459;
+    padding: 10px;
+    border-radius: 12px;
     }
     </style>
 """
-st.markdown(backgroundchatters,unsafe_allow_html=True)
-
+st.markdown(expander,unsafe_allow_html=True)
 #--------------------------------------------------------------------------------------------------
