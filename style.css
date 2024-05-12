@@ -8,6 +8,6 @@ section{
 }
 
 .user-select-none.svg-container{
-    backface-visibility: hidden;
+    background-color: white;
     opacity: 0%;
 }
