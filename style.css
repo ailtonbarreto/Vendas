@@ -1,3 +1,7 @@
 section{
     background-color: black;
 }
+
+.modebar-container{
+    visibility: hidden;
+}
