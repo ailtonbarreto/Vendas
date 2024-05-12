@@ -211,17 +211,3 @@ desativartelacheia = """
 st.markdown(desativartelacheia,unsafe_allow_html=True)
 
 
-
-
-
-expander = """
-    <style>
-    [data-testid="stExpander"]
-    {
-    background-color: #000000;
-    padding: 10px;
-    border-radius: 12px;
-    }
-    </style>
-"""
-st.markdown(expander,unsafe_allow_html=True)
