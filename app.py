@@ -212,13 +212,13 @@ st.markdown(hidefullscreenbutton,unsafe_allow_html=True)
 
 
 
-expander = """
-    <style>
-    [class="user-select-none svg-container"]
-    {
-    visibility: hidden
-    }
-    </style>
-"""
-st.markdown(expander,unsafe_allow_html=True)
+# expander = """
+#     <style>
+#     [class="user-select-none svg-container"]
+#     {
+#     visibility: hidden
+#     }
+#     </style>
+# """
+# st.markdown(expander,unsafe_allow_html=True)
 #--------------------------------------------------------------------------------------------------
