@@ -151,8 +151,11 @@ grafico_semana.update_yaxes(showgrid=False)
 
 vendas_produto = df_selection.groupby(by=["Produto"])[["Total"]].sum().sort_values(by="Total",ascending=True)
 grafico_produto  = px.bar(vendas_produto,x="Total",y=vendas_produto.index,
-    orientation="h",title=f'Ranking Produtodo de {Mês} de {ano}',color_discrete_sequence=["#0083B8"] * len(vendas_produto))
+orientation="h",title="<b>Ranking De Vendedores</b>",color_discrete_sequence=["#0083B8"] * len(vendas_produto))
 #--------------------------------------------------------------------------------------------------
+
+#--------------------------------------------------------------------------------------------------
+
 df_loja = df_selection.groupby(by='Cidade')['Total'].sum().reset_index()
 vendas_lojas = px.pie(df_loja,names="Cidade",values="Total",color_discrete_sequence=["#0083B8"],title="Lojas")
 vendas_lojas.update_yaxes(showgrid=False)
