@@ -216,7 +216,7 @@ backgroundchatters = """
     <style>
     [class="main-svg"]
     {
-    background-color: None;
+    background-color: white;
     }
     </style>
 """
