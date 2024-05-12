@@ -4,6 +4,8 @@ import streamlit as st
 
 st.set_page_config(page_title="Vendas Dashboard", page_icon=":bar_chart:", layout="wide")
 
+
+
 #--------------------------------------------------------------------------------------------------
 # Layout
 col1, col2, col3, col4 = st.columns([4,4,1,1])
@@ -177,6 +179,7 @@ st.markdown("""---""")
 
 #--------------------------------------------------------------------------------------------------
 # Esconder menu streamlit
+
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
@@ -185,5 +188,20 @@ hide_st_style = """
             </style>
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
+
+
+framegraficos = """
+    <style>
+    [data-testid="column"]
+    {
+    border-radius: 15px;
+    background-color: #2F3035;
+    padding: 10px;
+    opacity: 80%;
+    color: white;
+    }
+    </style>
+"""
+st.markdown(framegraficos,unsafe_allow_html=True)
 
 #--------------------------------------------------------------------------------------------------
