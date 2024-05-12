@@ -216,9 +216,7 @@ expander = """
     <style>
     [class="user-select-none svg-container"]
     {
-    background-color: #003459;
-    padding: 10px;
-    border-radius: 12px;
+    visibility: hidden
     }
     </style>
 """
