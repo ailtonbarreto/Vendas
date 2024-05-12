@@ -214,7 +214,7 @@ st.markdown(hidefullscreenbutton,unsafe_allow_html=True)
 
 backgroundchatters = """
     <style>
-    [data-testid="stVerticalBlock"]
+    [data-testid="stVerticalBlockBorderWrapper"]
     {
     background-color: red;
     }
