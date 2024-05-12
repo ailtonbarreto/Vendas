@@ -114,25 +114,17 @@ average_sale_by_transaction = round(df_selection["Total"].mean(), 2)
 
 
 with colleft:
-    st.markdown("""---""")
     st.subheader("QTD Vendas:",anchor=False)
     st.subheader(qtd_sales,anchor=False)
-    st.markdown("""---""")
 with colleft1:
-    st.markdown("""---""")
     st.subheader("Total de Vendas:",anchor=False)
     st.subheader(f"R$ {total_sales:,}",anchor=False)
-    st.markdown("""---""")
 with colright:
-    st.markdown("""---""")
     st.subheader("Ticket Médio:",anchor=False)
     st.subheader(f"R$ {average_sale_by_transaction}",anchor=False)
-    st.markdown("""---""")
 with colright1:
-    st.markdown("""---""")
     st.subheader("Média Toten:",anchor=False)
     st.subheader(f"{average_rating} {star_rating}",anchor=False)
-    st.markdown("""---""")
 
 #--------------------------------------------------------------------------------------------------
 # Vendas por dia no mês
@@ -169,13 +161,10 @@ with col7:
 with col8:
     st.plotly_chart(grafico_produto,use_container_width=True)
 with col9:
-    st.markdown("""---""")
     st.plotly_chart(vendasmes, use_container_width=True)
 with col10:
-    st.markdown("""---""")
     st.plotly_chart(grafico_semana,use_container_width=True)
 
-st.markdown("""---""")
 
 #--------------------------------------------------------------------------------------------------
 # Esconder menu streamlit
