@@ -216,7 +216,9 @@ backgroundchatters = """
     <style>
     [class="user-select-none svg-container"]
     {
-    visibility: hidden;
+    background-color: #2F3035;
+    padding: 10px;
+    opacity: 80%;
     }
     </style>
 """
