@@ -217,8 +217,6 @@ backgroundchatters = """
     [class="user-select-none svg-container"]
     {
     background-color: red;
-    padding: 10px;
-    opacity: 80%;
     }
     </style>
 """
