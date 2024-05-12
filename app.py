@@ -178,7 +178,7 @@ borderselect = """
     [data-testid="column"]
     {
     padding: 15px;
-    background-color: #003459;
+    background-color: #000000;
     border-radius: 12px;
     opacity: 97%;
     text-align: center;
@@ -218,7 +218,7 @@ expander = """
     <style>
     [data-testid="stExpander"]
     {
-    background-color: #003459;
+    background-color: #000000;
     padding: 10px;
     border-radius: 12px;
     }
