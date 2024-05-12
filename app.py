@@ -197,4 +197,17 @@ framegraficos = """
 """
 st.markdown(framegraficos,unsafe_allow_html=True)
 
+
+
+
+hidefullscreenbutton = """
+    <style>
+    [data-testid="StyledFullScreenButton"]
+    {
+    visibility: hidden;
+    }
+    </style>
+"""
+st.markdown(hidefullscreenbutton,unsafe_allow_html=True)
+
 #--------------------------------------------------------------------------------------------------
