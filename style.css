@@ -8,7 +8,7 @@ section{
 }
 
 .plot-container.plotly{
-    background-color: #2F3035;
+    backface-visibility: hidden;
     
     opacity: 0%;
 }
