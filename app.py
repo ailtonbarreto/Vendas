@@ -214,7 +214,7 @@ st.markdown(hidefullscreenbutton,unsafe_allow_html=True)
 
 expander = """
     <style>
-    [class="plot-container plotly"]
+    [class="stPlotlyChart js-plotly-plot"]
     {
     background-color: #003459;
     padding: 10px;
