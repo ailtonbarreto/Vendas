@@ -216,7 +216,7 @@ backgroundchatters = """
     <style>
     [data-testid="stVerticalBlock"]
     {
-    color: red;
+    background-color: red;
     }
     </style>
 """
