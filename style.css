@@ -5,3 +5,7 @@ section{
 .modebar-container{
     visibility: hidden;
 }
+
+.StyledFullScreenButton{
+    visibility: hidden;
+}
