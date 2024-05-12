@@ -7,3 +7,8 @@ section{
     visibility: hidden;
 }
 
+.plot-container.plotly{
+    background-color: #2F3035;
+    padding: 10px;
+    opacity: 80%;
+}
