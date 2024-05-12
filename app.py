@@ -214,7 +214,7 @@ st.markdown(hidefullscreenbutton,unsafe_allow_html=True)
 
 backgroundchatters = """
     <style>
-    [class="st-emotion-cache-keje6w e1f1d6gn3"]
+    [data-testid="stVerticalBlockBorderWrapper"]
     {
     background-color: red;
     }
