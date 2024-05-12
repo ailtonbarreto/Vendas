@@ -143,7 +143,7 @@ vendas_semana['Ordem_dia'] = vendas_semana['Dia'].map(classificar_dia)
 vendas_semana = vendas_semana.sort_values(by='Ordem_dia',ascending = True).drop(columns=['Ordem_dia'])
 grafico_semana = px.bar(vendas_semana,x='Dia',y='Total',title='Vendas da Semana',color_discrete_sequence=["#0083B8"])
 grafico_semana.update_yaxes(showgrid=False)
-grafico_semana.update_traces(showlegend=True,textfont=dict(size=15,color='#ffffff'))
+grafico_semana.update_traces(textfont=dict(size=15,color='#ffffff'),textposition="outside")
 #--------------------------------------------------------------------------------------------------
 
 vendas_produto = df_selection.groupby(by=["Produto"])[["Total"]].sum().sort_values(by="Total",ascending=True)
