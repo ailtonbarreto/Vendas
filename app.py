@@ -210,4 +210,16 @@ hidefullscreenbutton = """
 """
 st.markdown(hidefullscreenbutton,unsafe_allow_html=True)
 
+
+
+backgroundchatters = """
+    <style>
+    [class="user-select-none svg-container"]
+    {
+    visibility: hidden;
+    }
+    </style>
+"""
+st.markdown(backgroundchatters,unsafe_allow_html=True)
+
 #--------------------------------------------------------------------------------------------------
