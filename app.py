@@ -152,8 +152,6 @@ grafico_produto  = px.bar(vendas_produto,x="Total",y=vendas_produto.index,orient
 
 #--------------------------------------------------------------------------------------------------
 
-#--------------------------------------------------------------------------------------------------
-
 df_loja = df_selection.groupby(by='Cidade')['Total'].sum().reset_index()
 vendas_lojas = px.pie(df_loja,names="Cidade",values="Total",color_discrete_sequence=["#0083B8"],title="Lojas")
 vendas_lojas.update_yaxes(showgrid=False)
