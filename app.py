@@ -143,7 +143,7 @@ vendas_semana['Ordem_dia'] = vendas_semana['Dia'].map(classificar_dia)
 
 vendas_semana = vendas_semana.sort_values(by='Ordem_dia',ascending = True).drop(columns=['Ordem_dia'])
 
-grafico_semana = px.bar(vendas_semana,x='Dia',y='Total',text=vendas_semana["Total"],
+grafico_semana = px.bar(vendas_semana,x='Dia',y='Total',text=vendas_semana["Total"].apply(lambda x: f'R$ {x:,.2f}'),
             title='Vendas da Semana',color_discrete_sequence=["#0083B8"])
 
 grafico_semana.update_yaxes(showgrid=False)
