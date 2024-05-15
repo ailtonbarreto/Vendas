@@ -148,7 +148,9 @@ grafico_semana.update_traces(textfont=dict(size=15,color='#ffffff'),textposition
 
 vendas_produto = df_selection.groupby(by=["Produto"])[["Total"]].sum().sort_values(by="Total",ascending=True)
 
-grafico_produto  = px.bar(vendas_produto,x="Total",y=vendas_produto.index,orientation="h",title="<b>Ranking De Produtos</b>",color_discrete_sequence=["#0083B8"] * len(vendas_produto))
+grafico_produto  = px.bar(vendas_produto,x="Total",y=vendas_produto.index,orientation="h",title="<b>Ranking De Produtos</b>",
+                text=vendas_produto["Total"].apply(lambda x: f'R$ {x:,.2f}'),color_discrete_sequence=["#0083B8"] * len(vendas_produto))
+
 grafico_produto.update_traces(textfont=dict(size=15,color='#ffffff'),textposition="outside")
 
 #--------------------------------------------------------------------------------------------------
