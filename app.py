@@ -152,11 +152,17 @@ grafico_produto  = px.bar(vendas_produto,x="Total",y=vendas_produto.index,orient
                 text=vendas_produto["Total"].apply(lambda x: f'R$ {x:,.2f}'),color_discrete_sequence=["#0083B8"] * len(vendas_produto))
 
 grafico_produto.update_traces(textfont=dict(size=15,color='#ffffff'),textposition="outside")
+grafico_produto.update_yaxes(showgrid=False,visible=True,title="")
+grafico_produto.update_xaxes(showgrid=False,visible=False,title="")
+grafico_produto.layout.xaxis.fixedrange = True
+grafico_produto.layout.yaxis.fixedrange = True
+grafico_produto.update_layout(showlegend=False)
 
 #--------------------------------------------------------------------------------------------------
 
 df_loja = df_selection.groupby(by='Cidade')['Total'].sum().reset_index()
 vendas_lojas = px.pie(df_loja,names="Cidade",values="Total",color_discrete_sequence=["#0083B8"],title="Lojas")
+
 vendas_lojas.update_yaxes(showgrid=False)
 
 #--------------------------------------------------------------------------------------------------
