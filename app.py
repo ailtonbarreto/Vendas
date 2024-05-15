@@ -162,7 +162,7 @@ grafico_produto.update_layout(showlegend=False)
 
 df_loja = df_selection.groupby(by='Cidade')['Total'].sum().reset_index()
 vendas_lojas = px.pie(df_loja,names="Cidade",values="Total",
-         text=df_loja["Total"],color_discrete_sequence=["#0083B8"],title="Lojas")
+         text="Total",color_discrete_sequence=["#0083B8"],title="Lojas")
 vendas_lojas.layout.xaxis.fixedrange = True
 vendas_lojas.layout.yaxis.fixedrange = True
 vendas_lojas.update_layout(showlegend=False)
