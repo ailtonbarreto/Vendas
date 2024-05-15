@@ -140,8 +140,12 @@ vendasmes.update_layout(xaxis=dict(tickmode="linear"),plot_bgcolor="rgba(0,0,0,0
 #Gráficos
 vendas_semana = df_selection.groupby(by=["Dia"])["Total"].sum().reset_index()
 vendas_semana['Ordem_dia'] = vendas_semana['Dia'].map(classificar_dia)
+
 vendas_semana = vendas_semana.sort_values(by='Ordem_dia',ascending = True).drop(columns=['Ordem_dia'])
-grafico_semana = px.bar(vendas_semana,x='Dia',y='Total',title='Vendas da Semana',color_discrete_sequence=["#0083B8"])
+
+grafico_semana = px.bar(vendas_semana,x='Dia',y='Total',text=vendas_semana["Total"],
+            title='Vendas da Semana',color_discrete_sequence=["#0083B8"])
+
 grafico_semana.update_yaxes(showgrid=False)
 grafico_semana.update_traces(textfont=dict(size=15,color='#ffffff'),textposition="outside")
 #--------------------------------------------------------------------------------------------------
