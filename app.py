@@ -147,7 +147,7 @@ grafico_semana = px.bar(vendas_semana,x='Dia',y='Total',text=vendas_semana["Tota
             title='Vendas da Semana',color_discrete_sequence=["#0083B8"])
 
 grafico_semana.update_yaxes(showgrid=False)
-grafico_semana.update_traces(textfont=dict(size=15,color='#ffffff'),textposition="outside")
+grafico_semana.update_traces(textfont=dict(size=15,color='#ffffff'),textposition="auto")
 #--------------------------------------------------------------------------------------------------
 
 vendas_produto = df_selection.groupby(by=["Produto"])[["Total"]].sum().sort_values(by="Total",ascending=True)
