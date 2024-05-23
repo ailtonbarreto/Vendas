@@ -151,7 +151,8 @@ grafico_semana.update_traces(textfont=dict(size=15,color='#ffffff'),textposition
 #--------------------------------------------------------------------------------------------------
 
 vendas_produto = df_selection.groupby(by=["Produto"])[["Total"]].sum().sort_values(by="Total",ascending=True)
-vendas_produto = vendas_produto.sort_values("Total")
+vendas_produto = vendas_produto.sort_values("Total",ascending=True)
+vendas_produto["Total"] = ["Total"].apply(lambda x: f'R$ {x:,.2f}')
 
 #--------------------------------------------------------------------------------------------------
 
