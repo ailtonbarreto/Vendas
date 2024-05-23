@@ -178,7 +178,6 @@ with col7:
     st.plotly_chart(vendas_lojas,use_container_width=True)
 with col8:
     st.dataframe(vendas_produto,use_container_width=True)
-    st.plotly_chart(grafico_produto,use_container_width=True)
 with col9:
     st.plotly_chart(vendasmes, use_container_width=True)
 with col10:
