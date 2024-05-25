@@ -10,7 +10,7 @@ with open("style.css") as f:
 
 #--------------------------------------------------------------------------------------------------
 # Layout
-col1, col2, col3, col4 = st.columns([2,4,1,1])
+col1, col2, col3, col4 = st.columns([2,2,1,1])
 colleft, colleft1, colright, colright1 = st.columns(4)
 col7, col8 = st.columns(2)
 col9, col10 = st.columns([2,2])
@@ -103,7 +103,7 @@ df_selection = df_selection.sort_values(by='Ordem_dia',ascending = True).drop(co
 #--------------------------------------------------------------------------------------------------
 #Pagina principal
 with col1:
-    st.title("📊 Perfomance",anchor=False)
+    st.title("📊 Perfomance De Vendas - Lojas e Produtos",anchor=False)
 
 #--------------------------------------------------------------------------------------------------
 # Indicadores
