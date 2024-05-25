@@ -10,7 +10,7 @@ with open("style.css") as f:
 
 #--------------------------------------------------------------------------------------------------
 # Layout
-col1, col2, col3, col4 = st.columns([2,3,1,1])
+col1, col2, col3, col4 = st.columns([2,4,1,1])
 colleft, colleft1, colright, colright1 = st.columns(4)
 col7, col8 = st.columns(2)
 col9, col10 = st.columns([2,2])
