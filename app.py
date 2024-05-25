@@ -195,18 +195,6 @@ borderselect = """
 st.markdown(borderselect,unsafe_allow_html=True)
 
 
-cabecalho = """
-    <style>
-    [class="st-emotion-cache-ocqkz7 e1f1d6gn5"]
-    {
-    posistion: relative;
-    height: 200px;
-    }
-    </style>
-"""
-st.markdown(cabecalho,unsafe_allow_html=True)
-
-
 detalhes = """
     <style>
     [class="modebar-container"]
