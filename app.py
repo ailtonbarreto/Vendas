@@ -196,6 +196,22 @@ borderselect = """
 st.markdown(borderselect,unsafe_allow_html=True)
 
 
+cabecalho = """
+    <style>
+    [data-testid="stHorizontalBlock"]
+    {
+    padding: 15px;
+    padding-bottom: 5px;
+    background-color: #242B31;
+    border-radius: 12px;
+    opacity: 97%;
+    text-align: center;
+    }
+    </style>
+"""
+st.markdown(cabecalho,unsafe_allow_html=True)
+
+
 detalhes = """
     <style>
     [class="modebar-container"]
