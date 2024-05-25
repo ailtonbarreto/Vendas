@@ -182,7 +182,7 @@ with col10:
 
 borderselect = """
     <style>
-    [data-testid="column"]
+    [class="column"]
     {
     padding: 15px;
     padding-buttom: 0;
