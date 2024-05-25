@@ -93,8 +93,7 @@ with col3:
     ano = st.selectbox("Ano",df["Ano"].unique())
     
 with col2:
-    lojas = st.selectbox("Lojas",['Franca','Goioerê','Ribeirão Preto'])
-                        #  default=['Franca','Goioerê','Ribeirão Preto'])
+    lojas = st.multiselect("Lojas",['Franca','Goioerê','Ribeirão Preto'],default=['Franca','Goioerê','Ribeirão Preto'])
 
 df_selection = df.query("Ano == @ano == Ano & Mês ==@Mês & Cidade == @lojas") 
 
