@@ -185,7 +185,6 @@ borderselect = """
     [data-testid="column"]
     {
     padding: 15px;
-    padding-bottom: 5px;
     background-color: #242B31;
     border-radius: 12px;
     opacity: 97%;
@@ -194,18 +193,6 @@ borderselect = """
     </style>
 """
 st.markdown(borderselect,unsafe_allow_html=True)
-
-
-cabecalho = """
-    <style>
-    [class="st-emotion-cache-ocqkz7 e1f1d6gn5"]
-    {
-    padding: 15px;
-    padding-bottom: 0;
-    }
-    </style>
-"""
-st.markdown(cabecalho,unsafe_allow_html=True)
 
 
 detalhes = """
