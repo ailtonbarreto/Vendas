@@ -1,6 +1,10 @@
-section{
+/* section{
     background-color:#000000;
    
+} */
+
+body{
+    background-image: url(bg.png);
 }
 
 .modebar-container{
