@@ -185,6 +185,7 @@ borderselect = """
     [data-testid="column"]
     {
     padding: 15px;
+    padding-buttom: 0;
     background-color: #242B31;
     border-radius: 12px;
     opacity: 97%;
@@ -203,7 +204,6 @@ detalhes = """
     }
     </style>
 """
-
 
 st.markdown(detalhes,unsafe_allow_html=True)
 
