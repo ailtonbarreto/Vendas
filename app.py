@@ -199,6 +199,7 @@ cabecalho = """
     <style>
     [class="st-emotion-cache-ocqkz7 e1f1d6gn5"]
     {
+    posistion: relative;
     height: 200px;
     }
     </style>
