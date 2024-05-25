@@ -199,7 +199,7 @@ cabecalho = """
     <style>
     [class="st-emotion-cache-ocqkz7 e1f1d6gn5"]
     {
-    height: 20px;
+    height: 200px;
     }
     </style>
 """
