@@ -103,7 +103,7 @@ df_selection = df_selection.sort_values(by='Ordem_dia',ascending = True).drop(co
 #--------------------------------------------------------------------------------------------------
 #Pagina principal
 with col1:
-    st.title(":bar_chart: Vendas Dashboard",anchor=False)
+    st.title("📊 Perfomance",anchor=False)
     st.markdown("##")
 
 #--------------------------------------------------------------------------------------------------
