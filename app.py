@@ -198,14 +198,10 @@ st.markdown(borderselect,unsafe_allow_html=True)
 
 cabecalho = """
     <style>
-    [data-testid="stHorizontalBlock"]
+    [class="st-emotion-cache-ocqkz7 e1f1d6gn5"]
     {
     padding: 15px;
-    padding-bottom: 5px;
-    background-color: #242B31;
-    border-radius: 12px;
-    opacity: 97%;
-    text-align: center;
+    padding-bottom: 0;
     }
     </style>
 """
