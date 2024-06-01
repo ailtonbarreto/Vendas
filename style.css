@@ -1,6 +1,5 @@
 section{
-    background-image: url("/bg.png");
-    background-size: cover;
+    background: radial-gradient(black,rgb(1, 1, 61));
    
 }
 
