@@ -162,6 +162,7 @@ vendas_lojas.layout.xaxis.fixedrange = True
 vendas_lojas.layout.yaxis.fixedrange = True
 vendas_lojas.update_layout(showlegend=True)
 vendas_lojas.update_yaxes(showgrid=False)
+df_loja.update_traces(textfont=dict(size=20,color='#00ECFB'),textposition="inside")
 
 #--------------------------------------------------------------------------------------------------
 
