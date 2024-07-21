@@ -187,7 +187,6 @@ borderselect = """
     padding: 15px;
     background-color: #242B31;
     border-radius: 12px;
-    opacity: 97%;
     text-align: center;
     }
     </style>
