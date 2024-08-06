@@ -1,6 +1,7 @@
 import pandas as pd
 import plotly.express as px
 import streamlit as st
+import datetime as dt
 
 st.set_page_config(page_title="Vendas Dashboard", page_icon=":bar_chart:", layout="wide")
 
@@ -28,7 +29,7 @@ url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSRxxA0fqxSJKjei6PHqaI48m
 
 df = pd.read_csv(url)
 df
-df["Data2"] = pd.to_datetime(df["Data"])
+df["Data2"] = pd.to_datetime(df["Data"]).dt.strftime('%d/%m/%Y')
 
 
 #--------------------------------------------------------------------------------------------------
