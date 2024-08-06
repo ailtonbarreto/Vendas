@@ -27,6 +27,7 @@ url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSRxxA0fqxSJKjei6PHqaI48m
 #--------------------------------------------------------------------------------------------------
 
 df = pd.read_csv(url)
+df
 df["Data2"] = pd.to_datetime(df["Data"])
 
 
