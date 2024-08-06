@@ -25,13 +25,10 @@ url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSRxxA0fqxSJKjei6PHqaI48m
 
 
 #--------------------------------------------------------------------------------------------------
-# Coluna de horas no dataframe
-    # df["Dia Mês"] = pd.to_datetime(df["Data"]).dt.day
-    # return df
 
 df = pd.read_csv(url)
 # df["Data"] = pd.to_datetime(df["Data"]).dt.strftime('%d/%m/%Y')
-df
+st.write(df.info())
 
 #--------------------------------------------------------------------------------------------------
 #Definir mês
