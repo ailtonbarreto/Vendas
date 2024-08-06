@@ -33,11 +33,11 @@ url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSRxxA0fqxSJKjei6PHqaI48m
 
 df = pd.read_csv(url)
 df
-df["Data"] = pd.to_datetime(df["Data"])
+
 #--------------------------------------------------------------------------------------------------
 #Definir mês
 
-# df['Ano'] = df["Data"].dt.year
+df['Ano'] = df["Data"].dt.year
 # df['Mês'] = df["Data"].dt.month
 # df['Dia'] = df["Data"].dt.dayofweek
 
