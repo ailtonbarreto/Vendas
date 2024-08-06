@@ -28,7 +28,7 @@ url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSRxxA0fqxSJKjei6PHqaI48m
 #--------------------------------------------------------------------------------------------------
 
 df = pd.read_csv(url)
-df['Total'] = df["Total"].astype(float)
+df['Total'] = df["Total"].str.replace('.', '').str.replace(',', '.').astype(float)
 df["Data"] = pd.to_datetime(df["Data"])
 df['Ano'] = df["Data"].dt.year
 df['Mês'] = df["Data"].dt.month
