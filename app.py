@@ -33,6 +33,7 @@ df["Data"] = pd.to_datetime(df["Data"])
 df['Ano'] = df["Data"].dt.year
 df['Mês'] = df["Data"].dt.month
 df['Dia'] = df["Data"].dt.dayofweek
+df['Dia do Mês'] = df['Data'].dt.day
 
 
 #--------------------------------------------------------------------------------------------------
