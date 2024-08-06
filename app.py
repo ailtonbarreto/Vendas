@@ -32,7 +32,7 @@ url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSRxxA0fqxSJKjei6PHqaI48m
     # return df
 
 df = pd.read_csv(url)
-df["Data"] = pd.to_datetime(df["Data"])
+# df["Data"] = pd.to_datetime(df["Data"])
 #--------------------------------------------------------------------------------------------------
 #Definir mês
 
