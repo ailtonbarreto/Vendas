@@ -163,7 +163,7 @@ vendas_lojas.update_traces(textfont=dict(size=20,color='#ffffff'),textposition="
 with col7:
     st.plotly_chart(vendas_lojas,use_container_width=True)
 with col8:
-    st.subheader("Ranking de Produtos",anchor=False)
+    st.subheader("Ranking de Vendedores",anchor=False)
     st.dataframe(vendas_produto,use_container_width=True,column_config={"Produto":st.column_config.TextColumn(width='large')})
 with col9:
     st.plotly_chart(vendasmes, use_container_width=True)
