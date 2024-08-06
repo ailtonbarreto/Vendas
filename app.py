@@ -20,14 +20,19 @@ with col1:
     st.title('🏪 Performance das Lojas',anchor= False)
 #--------------------------------------------------------------------------------------------------
 # Ler o Excel
+
+url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSRxxA0fqxSJKjei6PHqaI48m3lVJzWENNnor-CUqkPbfbvGgBu-I1yOiUsPBnMZUBnMLNw97cg2X31/pub?output=csv"
+
 @st.cache_data
 def get_data_from_excel():
-    df = pd.read_excel(
-        io="Vendas.xlsx",
-        engine="openpyxl",
-        sheet_name="Sales",
-        skiprows=0,
-    )
+    # df = pd.read_excel(
+    #     io="Vendas.xlsx",
+    #     engine="openpyxl",
+    #     sheet_name="Sales",
+    #     skiprows=0,
+    # )
+    
+    df = pd.read_csv(url)
 #--------------------------------------------------------------------------------------------------
 # Coluna de horas no dataframe
     df["Dia Mês"] = pd.to_datetime(df["Data"]).dt.day
