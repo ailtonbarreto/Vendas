@@ -92,7 +92,7 @@ with col3:
     ano = st.selectbox("Ano",df["Ano"].unique())
     
 with col2:
-    lojas = st.multiselect("Lojas",df['Loja'].unique(),default= df['Loja'].unique())
+    lojas = st.multiselect("Lojas",df['Cidade'].unique(),default= df['Cidade'].unique())
 
 df_selection = df.query("Ano == @ano == Ano & Mês ==@Mês & Cidade == @lojas") 
 
