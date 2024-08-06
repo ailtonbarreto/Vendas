@@ -36,7 +36,7 @@ df
 #--------------------------------------------------------------------------------------------------
 #Definir mês
 
-df['Ano'] = df["Data"].dt.year
+# df['Ano'] = df["Data"].dt.year
 # df['Mês'] = df["Data"].dt.month
 # df['Dia'] = df["Data"].dt.dayofweek
 
