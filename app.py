@@ -10,7 +10,8 @@ with open("style.css") as f:
 
 #--------------------------------------------------------------------------------------------------
 # Layout
-col1, col2, col3, col4 = st.columns([4,2,1,1])
+col1, = st.columns(1)
+col2, col3, col4 = st.columns([2,1,1])
 colleft, colleft1, colright, colright1 = st.columns(4)
 col7, col8 = st.columns(2)
 col9, col10 = st.columns([2,2])
@@ -99,11 +100,6 @@ df_selection = df.query("Ano == @ano == Ano & Mês ==@Mês & Cidade == @lojas")
 
 df_selection['Ordem_dia'] = df_selection['Dia'].map(classificar_dia)
 df_selection = df_selection.sort_values(by='Ordem_dia',ascending = True).drop(columns=['Ordem_dia'])
-
-#--------------------------------------------------------------------------------------------------
-#Pagina principal
-with col1:
-    st.title("📊 Perfomance De Vendas - Lojas e Produtos",anchor=False)
 
 #--------------------------------------------------------------------------------------------------
 # Indicadores
