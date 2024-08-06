@@ -17,7 +17,7 @@ col7, col8 = st.columns(2)
 col9, col10 = st.columns([2,2])
 
 with col1:
-    st.title('Performance das Lojas',anchor= False)
+    st.title('🏪 Performance das Lojas',anchor= False)
 #--------------------------------------------------------------------------------------------------
 # Ler o Excel
 @st.cache_data
