@@ -38,7 +38,7 @@ def get_data_from_excel():
     df["Dia Mês"] = pd.to_datetime(df["Data"]).dt.day
     return df
 
-df = get_data_from_excel()
+# df = get_data_from_excel()
 #--------------------------------------------------------------------------------------------------
 #Definir mês
 
