@@ -23,15 +23,14 @@ with col1:
 
 url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSRxxA0fqxSJKjei6PHqaI48m3lVJzWENNnor-CUqkPbfbvGgBu-I1yOiUsPBnMZUBnMLNw97cg2X31/pub?output=csv"
 
-# @st.cache_data
-# def get_data_from_excel():
-#     df = pd.read_csv(url)
+
 #--------------------------------------------------------------------------------------------------
 # Coluna de horas no dataframe
     # df["Dia Mês"] = pd.to_datetime(df["Data"]).dt.day
     # return df
 
 df = pd.read_csv(url)
+df["Data"] = pd.to_datetime(df["Data"])
 df
 
 #--------------------------------------------------------------------------------------------------
