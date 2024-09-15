@@ -1,7 +1,6 @@
 import pandas as pd
 import plotly.express as px
 import streamlit as st
-import datetime as dt
 
 st.set_page_config(page_title="Vendas Dashboard", page_icon=":bar_chart:", layout="wide")
 
@@ -130,7 +129,7 @@ vendasmes = px.area(vendas_diames,x="Dia Mês",y="Total",title=f'Vendas de {Mês
 vendasmes.update_layout(xaxis=dict(tickmode="linear"),plot_bgcolor="rgba(0,0,0,0)",yaxis=(dict(showgrid=False)),)
 
 #--------------------------------------------------------------------------------------------------
-#Gráficos
+#Graficos
 vendas_semana = df_selection.groupby(by=["Dia"])["Total"].sum().reset_index()
 vendas_semana['Ordem_dia'] = vendas_semana['Dia'].map(classificar_dia)
 
