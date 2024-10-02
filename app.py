@@ -177,7 +177,7 @@ with col10:
 
 borderselect = """
     <style>
-    [data-testid="column"]
+    [data-testid="stVerticalBlockBorderWrapper"]
     {
     padding: 15px;
     background-color: #242B31;
