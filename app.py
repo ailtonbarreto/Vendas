@@ -177,7 +177,7 @@ with col10:
 
 borderselect = """
     <style>
-    [data-testid="stVerticalBlockBorderWrapper"]
+    [data-testid="stAppViewContainer"]
     {
     padding: 15px;
     background-color: #242B31;
