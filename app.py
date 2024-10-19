@@ -151,7 +151,7 @@ vendas_produto["Total"] = vendas_produto["Total"].apply(lambda x: f'R$ {x:,.2f}'
 #--------------------------------------------------------------------------------------------------
 
 df_loja = df_selection.groupby(by='Cidade')['Total'].sum().reset_index()
-vendas_lojas = px.bar(df_loja,x="Cidade",values="Total",
+vendas_lojas = px.bar(df_loja,x="Cidade",y="Total",
         color_discrete_sequence=["#0083B8"],title="Lojas")
 vendas_lojas.layout.xaxis.fixedrange = True
 vendas_lojas.layout.yaxis.fixedrange = True
