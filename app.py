@@ -146,10 +146,10 @@ grafico_semana.update_traces(textfont=dict(size=15,color='#ffffff'),textposition
 
 ranking_vendedor = df_selection.groupby(by=["Vendedor"])[["Total"]].sum().sort_values(by="Total",ascending=True)
 ranking_vendedor["Ranking"] = ranking_vendedor["Total"].rank(ascending=False,method="min")
-ranking_vendedor = ranking_vendedor[["Ranking","Vendedor","Total"]]
+
 ranking_vendedor = ranking_vendedor.sort_values("Total",ascending=False)
 ranking_vendedor["Total"] = ranking_vendedor["Total"].apply(lambda x: f'R$ {x:,.2f}')
-
+ranking_vendedor = ranking_vendedor[["Ranking","Vendedor","Total"]]
 #--------------------------------------------------------------------------------------------------
 
 df_loja = df_selection.groupby(by='Cidade')['Total'].sum().reset_index()
