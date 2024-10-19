@@ -148,7 +148,7 @@ ranking_vendedor = df_selection.groupby(by=["Vendedor"])[["Total"]].sum().sort_v
 ranking_vendedor["Ranking"] = ranking_vendedor["Total"].rank(ascending=False,method="min")
 ranking_vendedor = ranking_vendedor.sort_values("Total",ascending=False)
 ranking_vendedor["Total"] = ranking_vendedor["Total"].apply(lambda x: f'R$ {x:,.2f}')
-ranking_vendedor = ranking_vendedor[["Ranking", "Vendedor", "Total"]]
+
 
 st.dataframe(ranking_vendedor)
 #--------------------------------------------------------------------------------------------------
@@ -169,7 +169,8 @@ with col7:
     st.plotly_chart(vendas_lojas,use_container_width=True)
 with col8:
     st.subheader("Ranking de Vendedores",anchor=False)
-    st.dataframe(ranking_vendedor,use_container_width=True,column_config={"Produto":st.column_config.TextColumn(width='large')})
+    ranking_vendedor = ranking_vendedor[["Ranking", "Vendedor", "Total"]]
+    st.dataframe(ranking_vendedor,use_container_width=True)
 with col9:
     st.plotly_chart(vendasmes, use_container_width=True)
 with col10:
