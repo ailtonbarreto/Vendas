@@ -160,7 +160,7 @@ vendas_lojas = px.bar(df_loja,y="Cidade",x="Total",orientation="h",title="Lojas"
                       text=df_loja["Total"].apply(lambda x: f'R$ {x:,.2f}'))
 vendas_lojas.layout.xaxis.fixedrange = True
 vendas_lojas.layout.yaxis.fixedrange = True
-vendas_lojas.update_traces(textfont=dict(size=15,color='#ffffff'),textposition="auto")
+vendas_lojas.update_traces(textfont=dict(size=15,color='#ffffff'),textposition="outside")
 vendas_lojas.update_yaxes(showgrid=False)
 vendas_lojas.update_xaxes(visible= False)
 
