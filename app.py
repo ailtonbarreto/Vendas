@@ -169,7 +169,7 @@ with col7:
     st.plotly_chart(vendas_lojas,use_container_width=True)
 with col8:
     st.subheader("Ranking de Vendedores",anchor=False)
-    st.dataframe(ranking_vendedor,use_container_width=True,column_config={"Produto":st.column_config.TextColumn(width='large')})
+    st.dataframe(ranking_vendedor,use_container_width=True)
 with col9:
     st.plotly_chart(vendasmes, use_container_width=True)
 with col10:
