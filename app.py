@@ -152,12 +152,12 @@ vendas_produto["Total"] = vendas_produto["Total"].apply(lambda x: f'R$ {x:,.2f}'
 
 df_loja = df_selection.groupby(by='Cidade')['Total'].sum().reset_index()
 df_loja = df_loja.sort_values("Total",ascending=True)
-vendas_lojas = px.bar(df_loja,y="Cidade",x="Total",orientation="h",title="Lojas")
+vendas_lojas = px.bar(df_loja,y="Cidade",x="Total",orientation="h",title="Lojas",color_discrete_sequence=["#0083B8"])
 vendas_lojas.layout.xaxis.fixedrange = True
 vendas_lojas.layout.yaxis.fixedrange = True
 vendas_lojas.update_layout(showlegend=True)
 vendas_lojas.update_yaxes(showgrid=False)
-vendas_lojas.update_traces(textfont=dict(size=20,color='#ffffff'),textposition="auto")
+
 
 #--------------------------------------------------------------------------------------------------
 
