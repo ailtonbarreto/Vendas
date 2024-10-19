@@ -150,7 +150,6 @@ ranking_vendedor = ranking_vendedor.sort_values("Total",ascending=False)
 ranking_vendedor["Total"] = ranking_vendedor["Total"].apply(lambda x: f'R$ {x:,.2f}')
 
 
-st.dataframe(ranking_vendedor)
 #--------------------------------------------------------------------------------------------------
 
 df_loja = df_selection.groupby(by='Cidade')['Total'].sum().reset_index()
