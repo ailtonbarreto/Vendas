@@ -144,9 +144,10 @@ grafico_semana.update_yaxes(showgrid=False)
 grafico_semana.update_traces(textfont=dict(size=15,color='#ffffff'),textposition="auto")
 #--------------------------------------------------------------------------------------------------
 
-vendas_produto = df_selection.groupby(by=["Vendedor"])[["Total"]].sum().sort_values(by="Total",ascending=True)
-vendas_produto = vendas_produto.sort_values("Total",ascending=False)
-vendas_produto["Total"] = vendas_produto["Total"].apply(lambda x: f'R$ {x:,.2f}')
+ranking_vendedor = df_selection.groupby(by=["Vendedor"])[["Total"]].sum().sort_values(by="Total",ascending=True)
+ranking_vendedor["Ranking"] = ranking_vendedor["Total"].rank(ascending=False,method=min)
+ranking_vendedor = ranking_vendedor.sort_values("Total",ascending=False)
+ranking_vendedor["Total"] = ranking_vendedor["Total"].apply(lambda x: f'R$ {x:,.2f}')
 
 #--------------------------------------------------------------------------------------------------
 
@@ -166,7 +167,7 @@ with col7:
     st.plotly_chart(vendas_lojas,use_container_width=True)
 with col8:
     st.subheader("Ranking de Vendedores",anchor=False)
-    st.dataframe(vendas_produto,use_container_width=True,column_config={"Produto":st.column_config.TextColumn(width='large')})
+    st.dataframe(ranking_vendedor,use_container_width=True,column_config={"Produto":st.column_config.TextColumn(width='large')})
 with col9:
     st.plotly_chart(vendasmes, use_container_width=True)
 with col10:
