@@ -181,6 +181,7 @@ with col10:
 #--------------------------------------------------------------------------------------------------
 # Esconder menu streamlit
 
+
 borderselect = """
     <style>
     [data-testid="stColumn"]
