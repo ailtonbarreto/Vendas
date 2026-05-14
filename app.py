@@ -165,6 +165,7 @@ vendas_lojas.update_yaxes(showgrid=False)
 vendas_lojas.update_xaxes(visible= False)
 
 
+
 #--------------------------------------------------------------------------------------------------
 
 with col7:
