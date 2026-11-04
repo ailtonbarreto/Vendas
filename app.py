@@ -1,3 +1,6 @@
+import base64
+from pathlib import Path
+
 import pandas as pd
 import plotly.express as px
 import streamlit as st
@@ -5,9 +8,6 @@ import datetime as dt
 
 st.set_page_config(page_title="Vendas Dashboard", page_icon=":bar_chart:", layout="wide")
 
-
-with open("style.css") as f:
-    st.markdown(f"<style>{f.read()}</style>",unsafe_allow_html = True)
     
 
 #--------------------------------------------------------------------------------------------------
@@ -182,6 +182,21 @@ with col10:
 #--------------------------------------------------------------------------------------------------
 # Esconder menu streamlit
 
+background_image = base64.b64encode(
+    Path(__file__).with_name("bg.png").read_bytes()
+).decode("ascii")
+
+background = f"""
+    <style>
+    [data-testid="stAppViewContainer"] {{
+        background-image: url("data:image/png;base64,{background_image}");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }}
+    </style>
+"""
+st.markdown(background,unsafe_allow_html=True)
 
 borderselect = """
     <style>
@@ -220,3 +235,11 @@ desativartelacheia = """
 st.markdown(desativartelacheia,unsafe_allow_html=True)
 
 
+hide_st_style = """
+            <style>
+            #MainMenu {display: none;}
+            footer {display: none;}
+            header {display: none;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
