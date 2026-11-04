@@ -182,6 +182,17 @@ with col10:
 #--------------------------------------------------------------------------------------------------
 # Esconder menu streamlit
 
+header = """
+    <style>
+    [data-testid="stToolbar"]
+    {
+    visibility: hidden;
+    }
+    </style>
+"""
+
+st.markdown(header,unsafe_allow_html=True)
+
 background_image = base64.b64encode(
     Path(__file__).with_name("bg.png").read_bytes()
 ).decode("ascii")
