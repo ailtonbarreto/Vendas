@@ -186,7 +186,7 @@ header = """
     <style>
     [data-testid="stToolbar"]
     {
-    visibility: hidden;
+    display: none;
     }
     </style>
 """
